@@ -7,3 +7,9 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	background-color: #333;
 }
+
+button {
+	background-color: transparent;
+	border: none;
+	outline: none;
+}

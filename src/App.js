@@ -1,4 +1,5 @@
 import './App.css';
+import ShowHideButton from './components/showhidebtn';
 
 import Background from './svg/background';
 import Interactable from './svg/interactable';
@@ -10,6 +11,7 @@ const App = () => {
 				<Interactable />
 				<Background />
 			</div>
+			<ShowHideButton showing={false} />
 		</div>
 	);
 };
