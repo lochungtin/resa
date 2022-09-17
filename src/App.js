@@ -5,7 +5,7 @@ import Interactable from './svg/interactable';
 
 function App() {
 	return (
-		<div className='App'>
+		<div className='root'>
 			<div className='stack'>
 				<Interactable />
 				<Background />
