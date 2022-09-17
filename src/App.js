@@ -3,7 +3,7 @@ import './App.css';
 import Background from './svg/background';
 import Interactable from './svg/interactable';
 
-function App() {
+const App = () => {
 	return (
 		<div className='root'>
 			<div className='stack'>
@@ -12,6 +12,6 @@ function App() {
 			</div>
 		</div>
 	);
-}
+};
 
 export default App;
