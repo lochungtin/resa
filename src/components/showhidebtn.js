@@ -6,7 +6,7 @@ import show from '../icon/show.svg';
 const ShowHideButton = ({ showing }) => {
 	return (
 		<button className='showHideBtn'>
-			<img src={showing ? show : hide} alt='btn' width={50} />
+			<img src={showing ? hide : show} alt='btn' width={50} />
 		</button>
 	);
 };

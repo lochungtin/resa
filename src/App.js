@@ -11,7 +11,7 @@ const App = () => {
 				<Interactable />
 				<Background />
 			</div>
-			<ShowHideButton showing={false} />
+			<ShowHideButton showing={true} />
 		</div>
 	);
 };
