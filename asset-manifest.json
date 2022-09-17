@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/resa/static/css/main.48354628.css",
-    "main.js": "/resa/static/js/main.c21fd8bc.js",
+    "main.css": "/resa/static/css/main.cbd2f965.css",
+    "main.js": "/resa/static/js/main.0a2f7961.js",
     "static/js/787.9fa7d7c3.chunk.js": "/resa/static/js/787.9fa7d7c3.chunk.js",
+    "static/media/hide.svg": "/resa/static/media/hide.d3c0b809f384fe7a495cbe1e48d7fb29.svg",
+    "static/media/show.svg": "/resa/static/media/show.b2f2eefa76af83d44e4fab8fb447be0a.svg",
     "index.html": "/resa/index.html",
-    "main.48354628.css.map": "/resa/static/css/main.48354628.css.map",
-    "main.c21fd8bc.js.map": "/resa/static/js/main.c21fd8bc.js.map",
+    "main.cbd2f965.css.map": "/resa/static/css/main.cbd2f965.css.map",
+    "main.0a2f7961.js.map": "/resa/static/js/main.0a2f7961.js.map",
     "787.9fa7d7c3.chunk.js.map": "/resa/static/js/787.9fa7d7c3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.48354628.css",
-    "static/js/main.c21fd8bc.js"
+    "static/css/main.cbd2f965.css",
+    "static/js/main.0a2f7961.js"
   ]
 }
