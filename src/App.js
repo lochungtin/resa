@@ -7,8 +7,8 @@ function App() {
 	return (
 		<div className='App'>
 			<div className='stack'>
-				<Background />
 				<Interactable />
+				<Background />
 			</div>
 		</div>
 	);
