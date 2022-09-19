@@ -19,13 +19,9 @@ const MONTH_NAMES = [
 	'December',
 ];
 
-const today = new Date();
-const day = today.getDate();
-const month = today.getMonth() + 1;
-const year = today.getFullYear();
-let calendar = new Calendar(year, month);
+let calendar;
 
-export default function DatePicker({ setDate, selectedDate }) {
+export default function DatePicker({ day, month, year, setDate, selectedDate }) {
 	const [m, setM] = useState(month);
 	const [y, setY] = useState(year);
 	const [grid, setGrid] = useState(() => {
@@ -84,7 +80,8 @@ export default function DatePicker({ setDate, selectedDate }) {
 							return (
 								<button
 									key={cIndex}
-									className={'datePickCell ' + (selectedDate === cell ? 'dataPickCellSelected' : '')}>
+									className={'datePickCell ' + (selectedDate === cell ? 'dataPickCellSelected' : '')}
+									onClick={() => setDate(cell)}>
 									<p className={textClass}>{val}</p>
 								</button>
 							);
