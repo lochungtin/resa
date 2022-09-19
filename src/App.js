@@ -5,10 +5,10 @@ import ShowHideButton from './components/showhidebtn';
 import Background from './svg/background';
 import Interactable from './svg/interactable';
 
-const counter = { 5437: 1, 4936: 1, 4788: 1, 5289: 1, 4937: 1, 4798: 1, 4948: 1, 5288: 1, 4990: 1, 399: 1, 4991: 1 };
-
 const App = () => {
+	const [unbound, setBinded] = useState(true);
 	const [selected, setSelected] = useState('');
+	const [counter, setCounter] = useState({});
 
 	const click = (id) => {
 		console.log(id);
