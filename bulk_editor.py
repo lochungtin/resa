@@ -6,4 +6,4 @@ with open("js.txt", "w+") as wFile:
             sLine = line.strip()
             if sLine.startswith("id"):
                 wFile.write(
-                    "\t\t\t\tstroke={selected === '" + sLine[4:-1] + "' ? '#fff' : '#000'}\n")
+                    "\t\t\t\tfill={counter['" + sLine[4:-1] + "'] ? ACCENTED_FILL_COLOR : BASE_FILL_COLOR}\n")
