@@ -124,7 +124,7 @@
 	background-color: #333;
 	display: flex;
 	justify-content: space-between;
-	height: 40vh;
+	height: 50vh;
 	width: 25vw;
 }
 
@@ -132,8 +132,18 @@
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	height: 35vh;
+	height: 40vh;
 	justify-content: space-between;
+}
+
+.inputTimePicker {
+	align-items: center;
+	display: flex;
+	justify-content: space-around;
+}
+
+.inputTimePickerSeparator {
+	margin: 0 1rem;
 }
 
 .datePickRoot {
