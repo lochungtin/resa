@@ -40,7 +40,7 @@ export default function App() {
 	const data = Object.entries(entries).filter((key, entry) => selected === 'all' || selected === entry.location);
 	return (
 		<div className='root'>
-			{inputShow && <InputOverlay showing={inputShow} />}
+			{inputShow && <InputOverlay close={togglePopUp} />}
 			<div className='stack'>
 				<Interactable click={click} selected={selected} counter={counter} />
 				<Background />
@@ -51,7 +51,7 @@ export default function App() {
 				))}
 			</div>
 			<div className='btnStack'>
-				<InputBtn click={togglePopUp} />
+				<InputBtn click={togglePopUp} showing={inputShow} />
 				<ShowHideButton click={toggleShow} showing={selected !== ''} />
 			</div>
 		</div>

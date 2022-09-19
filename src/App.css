@@ -49,24 +49,6 @@
 	right: 0;
 }
 
-.inputOverlayBg {
-	align-items: center;
-	background-color: rgba(0, 0, 0, 0.8);
-	display: flex;
-	height: 100vh;
-	justify-content: center;
-	position: absolute;
-	width: 100vw;
-	z-index: 1;
-}
-
-.inputBg {
-	border-radius: 1rem;
-	background-color: #333;
-	height: 90vh;
-	width: 25vw;
-}
-
 .entryContainer {
 	height: 80vh;
 	overflow-x: hidden;
@@ -125,6 +107,35 @@
 	width: 20px;
 }
 
+.inputOverlayBg {
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.8);
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	position: absolute;
+	width: 100vw;
+	z-index: 1;
+}
+
+.inputBg {
+	align-items: center;
+	border-radius: 1rem;
+	background-color: #333;
+	display: flex;
+	justify-content: space-between;
+	height: 40vh;
+	width: 25vw;
+}
+
+.inputContent {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	height: 35vh;
+	justify-content: space-between;
+}
+
 .datePickRoot {
 	align-items: center;
 	display: flex;
@@ -165,4 +176,18 @@
 
 .datePickCellAccented {
 	color: #85c997;
+}
+
+.timePickRoot {
+	align-items: center;
+	display: flex;
+	justify-self: center;
+}
+
+.timePickRoller {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-self: center;
+	width: 3rem;
 }
