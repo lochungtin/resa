@@ -37,24 +37,19 @@ export default function App() {
 
 	const togglePopUp = (popUpShow) => setInputShow(popUpShow);
 
+	const data = Object.entries(entries).filter((key, entry) => selected === 'all' || selected === entry.location);
 	return (
 		<div className='root'>
-			{inputShow && <InputOverlay />}
+			{inputShow && <InputOverlay showing={inputShow} />}
 			<div className='stack'>
 				<Interactable click={click} selected={selected} counter={counter} />
 				<Background />
 			</div>
 			<div className={'entryContainer ' + (selected !== '' ? 'nWidth' : 'zWidth')}>
-				{Object.entries(entries)
-					.filter((key, entry) => {
-						return selected === 'all' || selected === entry.location;
-					})
-					.map(([key, entry], index) => {
-						console.log(key);
-						return <Entry key={index} data={entry} />;
-					})}
+				{data.map(([key, entry], index) => (
+					<Entry key={index} data={entry} />
+				))}
 			</div>
-
 			<div className='btnStack'>
 				<InputBtn click={togglePopUp} />
 				<ShowHideButton click={toggleShow} showing={selected !== ''} />

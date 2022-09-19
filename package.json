@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://lochungtin.github.io/resa",
   "dependencies": {
+    "@enigmaoffline/calendarjs": "^1.0.5",
     "@reduxjs/toolkit": "^1.8.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

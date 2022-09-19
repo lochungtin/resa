@@ -63,7 +63,7 @@
 .inputBg {
 	border-radius: 1rem;
 	background-color: #333;
-	height: 50vh;
+	height: 90vh;
 	width: 25vw;
 }
 
@@ -123,4 +123,46 @@
 .entryIcon {
 	margin-right: 2rem;
 	width: 20px;
+}
+
+.datePickRoot {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.datePickRow {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.datePickMonth {
+	text-align: center;
+	width: 8rem;
+}
+
+.datePickCell {
+	align-items: center;
+	display: flex;
+	font-size: 1rem;
+	font-weight: bold;
+	justify-content: center;
+	height: 2rem;
+	width: 2rem;
+}
+
+.dataPickCellSelected {
+	border: 2px solid #444;
+	border-radius: 0.5rem;
+}
+
+.datePickCellDisabled {
+	color: #555;
+}
+
+.datePickCellAccented {
+	color: #85c997;
 }
