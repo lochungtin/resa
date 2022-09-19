@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/resa/static/css/main.149397b6.css",
-    "main.js": "/resa/static/js/main.40536f57.js",
+    "main.css": "/resa/static/css/main.c10886f6.css",
+    "main.js": "/resa/static/js/main.e917e956.js",
     "static/js/787.9fa7d7c3.chunk.js": "/resa/static/js/787.9fa7d7c3.chunk.js",
     "static/media/date.svg": "/resa/static/media/date.7fe013d97f2332157db6c6af6a3a8370.svg",
     "static/media/hide.svg": "/resa/static/media/hide.d3c0b809f384fe7a495cbe1e48d7fb29.svg",
@@ -10,12 +10,16 @@
     "static/media/time.svg": "/resa/static/media/time.91507da2888b4b7063dd027b72486183.svg",
     "index.html": "/resa/index.html",
     "static/media/desc.svg": "/resa/static/media/desc.2e496070f8acbe65e170160e05307bf1.svg",
-    "main.149397b6.css.map": "/resa/static/css/main.149397b6.css.map",
-    "main.40536f57.js.map": "/resa/static/js/main.40536f57.js.map",
+    "static/media/chevron-down.svg": "/resa/static/media/chevron-down.e71d69607846f9b50c6a22cedd729170.svg",
+    "static/media/chevron-left.svg": "/resa/static/media/chevron-left.3d0dc0ea6b2e02d0c1d44d3c5649285b.svg",
+    "static/media/chevron-right.svg": "/resa/static/media/chevron-right.e0c815b550e3e58d097a7e1b7eb44dd3.svg",
+    "static/media/chevron-up.svg": "/resa/static/media/chevron-up.3f2cc279f328c0db52d4ed6c3257450e.svg",
+    "main.c10886f6.css.map": "/resa/static/css/main.c10886f6.css.map",
+    "main.e917e956.js.map": "/resa/static/js/main.e917e956.js.map",
     "787.9fa7d7c3.chunk.js.map": "/resa/static/js/787.9fa7d7c3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.149397b6.css",
-    "static/js/main.40536f57.js"
+    "static/css/main.c10886f6.css",
+    "static/js/main.e917e956.js"
   ]
 }
