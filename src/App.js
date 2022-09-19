@@ -48,13 +48,22 @@ export default function App() {
 				<Entry
 					data={{
 						location: 'Hampstead Heath',
+						date: '19 - 9 - 2022',
+						startTime: '3:00PM',
+						endTime: '10:00PM',
+						remarks: 'First ever official date!',
+					}}
+				/>
+				<Entry
+					data={{
+						location: 'Greenwich Park / Blackheath / Some more text',
 						date: '19-9-2022',
 						startTime: '3:00PM',
 						endTime: '10:00PM',
-						remarks: 'First ever date',
+						remarks:
+							'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra orci sagittis eu volutpat. Diam maecenas ultricies mi eget mauris pharetra et ultrices. Iaculis nunc sed augue lacus viverra vitae congue eu consequat.',
 					}}
 				/>
-				<Entry data={{ location: 'Hampstead Heath' }} />
 				<Entry data={{ location: 'Hampstead Heath' }} />
 				<Entry data={{ location: 'Hampstead Heath' }} />
 				<Entry data={{ location: 'Hampstead Heath' }} />

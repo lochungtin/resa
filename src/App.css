@@ -86,31 +86,38 @@
 
 .entryBg {
 	align-items: center;
-	background-color: #444;
+	background-color: #2e2e2e;
 	border-radius: 1rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	margin-bottom: 1rem;
-	padding-bottom: 1.5rem;
+	padding: 1.5rem 0;
 	width: 25vw;
 }
 
 .entryLocation {
 	color: #85c997;
 	border-bottom: 2px solid #333;
+	font-weight: bold;
 	font-size: 1.5rem;
 	line-height: 2rem;
-	padding-left: 0.5rem;
+	padding: 0 0 0.5rem 0.5rem;
 	width: 20vw;
 }
 
 .entryRow {
 	align-items: center;
 	display: flex;
-	height: 2rem;
 	justify-content: flex-start;
+	text-align: justify;
+	margin-top: 0.75rem;
 	width: 20vw;
+}
+
+.entrySingleLine {
+	height: 1rem;
+	line-height: 1rem;
 }
 
 .entryIcon {

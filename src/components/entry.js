@@ -10,11 +10,11 @@ export default function Entry({ data }) {
 			<p className='entryLocation'>{data.location}</p>
 			<div className='entryRow'>
 				<img className='entryIcon' src={date} alt='logo' width={20} />
-				<p>{data.date}</p>
+				<p className='entrySingleLine'>{data.date}</p>
 			</div>
 			<div className='entryRow'>
 				<img className='entryIcon' src={time} alt='logo' width={20} />
-				<p>
+				<p className='entrySingleLine'>
 					{data.startTime} - {data.endTime}
 				</p>
 			</div>

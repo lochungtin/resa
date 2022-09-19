@@ -15,6 +15,11 @@ button {
 	user-select: none;
 }
 
+p {
+	color: #ddd;
+	margin: 0rem;
+}
+
 ::-webkit-scrollbar {
 	width: 0.5rem;
 }
