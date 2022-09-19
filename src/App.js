@@ -3,17 +3,19 @@ import React, { useState } from 'react';
 import './App.css';
 
 import { bindCountData, bindEntryData } from './api/firebase';
-import PopUpInput from './components/popupinput';
+import InputBtn from './components/inputbtn';
+import InputOverlay from './components/inputoverlay';
 import ShowHideButton from './components/showhidebtn';
 import Background from './svg/background';
 import Interactable from './svg/interactable';
 
 export default function App() {
 	const [unbound, setBinded] = useState(true);
-	const [selected, setSelected] = useState('');
-
 	const [counter, setCounter] = useState({});
 	const [entries, setEntries] = useState({});
+
+	const [selected, setSelected] = useState('');
+	const [inputShow, setInputShow] = useState(false);
 
 	if (unbound) {
 		bindCountData(setCounter);
@@ -32,14 +34,17 @@ export default function App() {
 		else setSelected('all');
 	};
 
+	const togglePopUp = (popUpShow) => setInputShow(popUpShow);
+
 	return (
 		<div className='root'>
+			{inputShow && <InputOverlay />}
 			<div className='stack'>
 				<Interactable click={click} selected={selected} counter={counter} />
 				<Background />
 			</div>
 			<div className='btnStack'>
-				<PopUpInput click={toggleShow} showing={selected !== ''} />
+				<InputBtn click={togglePopUp} />
 				<ShowHideButton click={toggleShow} showing={selected !== ''} />
 			</div>
 		</div>
