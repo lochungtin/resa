@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import './App.css';
 
 import { bindCountData, bindEntryData } from './api/firebase';
+import PopUpInput from './components/popupinput';
 import ShowHideButton from './components/showhidebtn';
 import Background from './svg/background';
 import Interactable from './svg/interactable';
@@ -37,7 +38,10 @@ export default function App() {
 				<Interactable click={click} selected={selected} counter={counter} />
 				<Background />
 			</div>
-			<ShowHideButton click={toggleShow} showing={selected !== ''} />
+			<div className='btnStack'>
+				<PopUpInput click={toggleShow} showing={selected !== ''} />
+				<ShowHideButton click={toggleShow} showing={selected !== ''} />
+			</div>
 		</div>
 	);
 }
