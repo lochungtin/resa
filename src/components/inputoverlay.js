@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
+import desc from '../icon/desc.svg';
 import ff from '../icon/fast_forward.svg';
+import loc from '../icon/location.svg';
 
 import DatePicker from './datepicker';
 import TimePicker from './timepicker';
@@ -50,7 +52,12 @@ export default function InputOverlay({ close }) {
 							</div>
 						</>
 					) : (
-						<></>
+						<>
+							<div>
+								<img src={loc} alt='loc' width={30} />
+								<img src={desc} alt='desc' width={30} />
+							</div>
+						</>
 					)}
 				</div>
 				<button onClick={next}>
