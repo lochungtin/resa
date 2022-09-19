@@ -1,21 +1,26 @@
 import React from 'react';
 
+import date from '../icon/date.svg';
+import desc from '../icon/desc.svg';
+import time from '../icon/time.svg';
+
 export default function Entry({ data }) {
 	return (
 		<div className='entryBg'>
-			<p>{data.location}</p>
-			<div>
-				<img src={undefined} alt='logo' width={20} />
+			<p className='entryLocation'>{data.location}</p>
+			<div className='entryRow'>
+				<img className='entryIcon' src={date} alt='logo' width={20} />
 				<p>{data.date}</p>
 			</div>
-			<div>
-				<img src={undefined} alt='logo' width={20} />
-				<p>{data.startTime}</p>
-				<p>{data.endTime}</p>
+			<div className='entryRow'>
+				<img className='entryIcon' src={time} alt='logo' width={20} />
+				<p>
+					{data.startTime} - {data.endTime}
+				</p>
 			</div>
 			{data.remarks ? (
-				<div>
-					<img src={undefined} alt='logo' width={20} />
+				<div className='entryRow'>
+					<img className='entryIcon' src={desc} alt='logo' width={20} />
 					<p>{data.remarks}</p>
 				</div>
 			) : null}

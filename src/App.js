@@ -45,7 +45,15 @@ export default function App() {
 				<Background />
 			</div>
 			<div className={'entryContainer ' + (selected !== '' ? 'nWidth' : 'zWidth')}>
-				<Entry data={{ location: 'Hampstead Heath' }} />
+				<Entry
+					data={{
+						location: 'Hampstead Heath',
+						date: '19-9-2022',
+						startTime: '3:00PM',
+						endTime: '10:00PM',
+						remarks: 'First ever date',
+					}}
+				/>
 				<Entry data={{ location: 'Hampstead Heath' }} />
 				<Entry data={{ location: 'Hampstead Heath' }} />
 				<Entry data={{ location: 'Hampstead Heath' }} />
