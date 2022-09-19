@@ -12,4 +12,5 @@ button {
 	background-color: transparent;
 	border: none;
 	outline: none;
+	user-select: none;
 }
