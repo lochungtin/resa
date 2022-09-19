@@ -17,9 +17,6 @@ const db = getDatabase(
 export const bindCountData = (setState) => {
 	onValue(ref(db, 'countData'), (snapshot) => {
 		let data = snapshot.val();
-		if (data != null) {
-			console.log(data);
-			setState(data);
-		}
+		if (data != null) setState(data);
 	});
 };

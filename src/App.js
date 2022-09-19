@@ -9,6 +9,7 @@ import Interactable from './svg/interactable';
 const App = () => {
 	const [unbound, setBinded] = useState(true);
 	const [selected, setSelected] = useState('');
+
 	const [counter, setCounter] = useState({});
 
 	if (unbound) {
