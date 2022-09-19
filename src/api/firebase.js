@@ -20,3 +20,10 @@ export const bindCountData = (setState) => {
 		if (data != null) setState(data);
 	});
 };
+
+export const bindEntryData = (setState) => {
+	onValue(ref(db, 'entryData'), (snapshot) => {
+		let data = snapshot.val();
+		if (data != null) setState(data);
+	});
+};

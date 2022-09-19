@@ -16,17 +16,17 @@
 
 .stack {
 	position: relative;
-	height: 773px;
-	width: 1001px;
+	width: 50%;
 }
 
 .mapLayer {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
+	aspect-ratio: 1.29;
 }
 
 .mapBackground {
 	z-index: -1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
 }

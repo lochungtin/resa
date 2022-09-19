@@ -1,7 +1,7 @@
 import './App.css';
 
 import React, { useState } from 'react';
-import { bindCountData } from './api/firebase';
+import { bindCountData, bindEntryData } from './api/firebase';
 import ShowHideButton from './components/showhidebtn';
 import Background from './svg/background';
 import Interactable from './svg/interactable';
@@ -11,9 +11,11 @@ const App = () => {
 	const [selected, setSelected] = useState('');
 
 	const [counter, setCounter] = useState({});
+	const [entries, setEntries] = useState({});
 
 	if (unbound) {
 		bindCountData(setCounter);
+		bindEntryData(setEntries);
 		setBinded(false);
 	}
 
