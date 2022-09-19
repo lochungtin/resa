@@ -66,3 +66,22 @@
 	height: 50vh;
 	width: 25vw;
 }
+
+.entryBg {
+	background-color: #444;
+	border-radius: 1rem;
+	width: 25vw;
+}
+
+.nWidth {
+	margin-left: 3rem;
+	overflow-x: hidden;
+	transition: 0.2s;
+	width: 25vw;
+}
+
+.zWidth {
+	overflow-x: hidden;
+	transition: 0.2s;
+	width: 0px;
+}

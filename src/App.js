@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import './App.css';
 
 import { bindCountData, bindEntryData } from './api/firebase';
+import Entry from './components/entry';
 import InputBtn from './components/inputbtn';
 import InputOverlay from './components/inputoverlay';
 import ShowHideButton from './components/showhidebtn';
@@ -43,6 +44,16 @@ export default function App() {
 				<Interactable click={click} selected={selected} counter={counter} />
 				<Background />
 			</div>
+			<div className={selected !== '' ? 'nWidth' : 'zWidth'}>
+				<Entry data={{ location: 'Hampstead Heath' }} />
+				<Entry data={{ location: 'Hampstead Heath' }} />
+				<Entry data={{ location: 'Hampstead Heath' }} />
+				<Entry data={{ location: 'Hampstead Heath' }} />
+				<Entry data={{ location: 'Hampstead Heath' }} />
+				<Entry data={{ location: 'Hampstead Heath' }} />
+				<Entry data={{ location: 'Hampstead Heath' }} />
+			</div>
+
 			<div className='btnStack'>
 				<InputBtn click={togglePopUp} />
 				<ShowHideButton click={toggleShow} showing={selected !== ''} />
