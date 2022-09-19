@@ -5,6 +5,7 @@ import desc from '../icon/desc.svg';
 import time from '../icon/time.svg';
 
 export default function Entry({ data }) {
+	console.log(data[1]);
 	return (
 		<div className='entryBg'>
 			<p className='entryLocation'>{data.location}</p>
