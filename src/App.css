@@ -34,7 +34,7 @@
 
 .stack {
 	position: relative;
-	width: 50%;
+	width: 55vw;
 }
 
 .mapLayer {
@@ -50,9 +50,19 @@
 }
 
 .inputOverlayBg {
+	align-items: center;
 	background-color: rgba(0, 0, 0, 0.8);
+	display: flex;
 	height: 100vh;
+	justify-content: center;
 	position: absolute;
 	width: 100vw;
 	z-index: 1;
+}
+
+.inputBg {
+	border-radius: 1rem;
+	background-color: #333;
+	height: 50vh;
+	width: 25vw;
 }
