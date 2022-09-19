@@ -1,12 +1,13 @@
+import React, { useState } from 'react';
+
 import './App.css';
 
-import React, { useState } from 'react';
 import { bindCountData, bindEntryData } from './api/firebase';
 import ShowHideButton from './components/showhidebtn';
 import Background from './svg/background';
 import Interactable from './svg/interactable';
 
-const App = () => {
+export default function App() {
 	const [unbound, setBinded] = useState(true);
 	const [selected, setSelected] = useState('');
 
@@ -39,6 +40,4 @@ const App = () => {
 			<ShowHideButton click={toggleShow} showing={selected !== ''} />
 		</div>
 	);
-};
-
-export default App;
+}

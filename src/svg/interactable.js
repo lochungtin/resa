@@ -5,7 +5,7 @@ const SELECTED_BORDER_COLOR = '#FFF';
 const BASE_FILL_COLOR = '#93a397';
 const ACCENTED_FILL_COLOR = '#85c997';
 
-const Interactable = ({ click, selected, counter }) => {
+export default function Interactable({ click, selected, counter }) {
 	return (
 		<div className='mapLayer'>
 			<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 751 580'>
@@ -2788,6 +2788,4 @@ const Interactable = ({ click, selected, counter }) => {
 			</svg>
 		</div>
 	);
-};
-
-export default Interactable;
+}

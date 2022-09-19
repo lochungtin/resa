@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Background = () => {
+export default function Background() {
 	return (
 		<svg
 			className='mapLayer mapBackground'
@@ -726,6 +726,4 @@ const Background = () => {
 				transform='matrix(.1 0 0 -.1 0 580)'></path>
 		</svg>
 	);
-};
-
-export default Background;
+}
