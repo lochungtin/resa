@@ -14,3 +14,22 @@ button {
 	outline: none;
 	user-select: none;
 }
+
+::-webkit-scrollbar {
+	width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+	background: #444;
+	border-radius: 0.25rem;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #93a397;
+	border-radius: 0.25rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #85c997;
+	border-radius: 0.25rem;
+}

@@ -44,7 +44,12 @@ export default function App() {
 				<Interactable click={click} selected={selected} counter={counter} />
 				<Background />
 			</div>
-			<div className={selected !== '' ? 'nWidth' : 'zWidth'}>
+			<div className={'entryContainer ' + (selected !== '' ? 'nWidth' : 'zWidth')}>
+				<Entry data={{ location: 'Hampstead Heath' }} />
+				<Entry data={{ location: 'Hampstead Heath' }} />
+				<Entry data={{ location: 'Hampstead Heath' }} />
+				<Entry data={{ location: 'Hampstead Heath' }} />
+				<Entry data={{ location: 'Hampstead Heath' }} />
 				<Entry data={{ location: 'Hampstead Heath' }} />
 				<Entry data={{ location: 'Hampstead Heath' }} />
 				<Entry data={{ location: 'Hampstead Heath' }} />

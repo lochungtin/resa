@@ -67,21 +67,25 @@
 	width: 25vw;
 }
 
-.entryBg {
-	background-color: #444;
-	border-radius: 1rem;
-	width: 25vw;
+.entryContainer {
+	height: 80vh;
+	overflow-x: hidden;
+	transition: 0.5s;
 }
 
 .nWidth {
 	margin-left: 3rem;
-	overflow-x: hidden;
-	transition: 0.2s;
+	overflow-y: scroll;
+	padding-right: 2rem;
 	width: 25vw;
 }
 
 .zWidth {
-	overflow-x: hidden;
-	transition: 0.2s;
 	width: 0px;
+}
+
+.entryBg {
+	background-color: #444;
+	border-radius: 1rem;
+	width: 25vw;
 }
