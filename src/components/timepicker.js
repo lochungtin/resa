@@ -18,16 +18,16 @@ export default function TimePicker({ setTime, selectedTime }) {
 			<div className='timePickRoller'>
 				<button
 					onClick={() => {
-						applyTime((hour + 1) % 12, min, am);
-						setHour((hour + 1) % 12);
+						applyTime((hour + 11) % 12, min, am);
+						setHour((hour + 11) % 12);
 					}}>
 					<img src={up} alt='up' width={25} />
 				</button>
 				<p>{HOUR_ROLLER[hour]}</p>
 				<button
 					onClick={() => {
-						applyTime((hour + 11) % 12, min, am);
-						setHour((hour + 11) % 12);
+						applyTime((hour + 1) % 12, min, am);
+						setHour((hour + 1) % 12);
 					}}>
 					<img src={down} alt='down' width={25} />
 				</button>
@@ -36,16 +36,16 @@ export default function TimePicker({ setTime, selectedTime }) {
 			<div className='timePickRoller'>
 				<button
 					onClick={() => {
-						applyTime(hour, (min + 1) % 4, am);
-						setMin((min + 1) % 4);
+						applyTime(hour, (min + 3) % 4, am);
+						setMin((min + 3) % 4);
 					}}>
 					<img src={up} alt='up' width={25} />
 				</button>
 				<p>{MIN_ROLLER[min]}</p>
 				<button
 					onClick={() => {
-						applyTime(hour, (min + 3) % 4, am);
-						setMin((min + 3) % 4);
+						applyTime(hour, (min + 1) % 4, am);
+						setMin((min + 1) % 4);
 					}}>
 					<img src={down} alt='down' width={25} />
 				</button>
