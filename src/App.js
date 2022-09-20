@@ -52,7 +52,7 @@ export default function App() {
 	if (loggedIn)
 		return (
 			<div className='root'>
-				{inputShow && <InputOverlay close={togglePopUp} />}
+				{inputShow && <InputOverlay close={togglePopUp} selected={selected} />}
 				<div className='stack'>
 					<Interactable click={click} selected={selected} counter={counter} />
 					<Background />

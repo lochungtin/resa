@@ -14,11 +14,11 @@ const day = today.getDate();
 const month = today.getMonth() + 1;
 const year = today.getFullYear();
 
-export default function InputOverlay({ close }) {
+export default function InputOverlay({ close, selected }) {
 	const [date, setDate] = useState(`${day}-${month.toString().padStart(2, '0')}-${year}`);
 	const [startTime, setStartTime] = useState('03:00 PM');
 	const [endTime, setEndTime] = useState('10:00 PM');
-	const [location, setLocation] = useState('4936');
+	const [location, setLocation] = useState(selected || '4936');
 	const [alt, setAlt] = useState('');
 	const [remarks, setRemarks] = useState('');
 
@@ -70,6 +70,9 @@ export default function InputOverlay({ close }) {
 									<option className='inputOption' value='4937'>
 										4937
 									</option>
+									<option className='inputOption' value='5437'>
+										5437
+									</option>
 								</select>
 							</div>
 							<div className='inputRow'>
@@ -85,7 +88,7 @@ export default function InputOverlay({ close }) {
 								<textarea
 									className='inputRemarks'
 									onChange={(event) => setRemarks(event.target.value)}
-									placeholder='Remarks ... (Optional)'
+									placeholder='Remarks (Optional)'
 								/>
 							</div>
 						</>
