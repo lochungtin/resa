@@ -49,6 +49,6 @@ export const deleteEntry = (entry) => {
 		if (snapshot.val() !== null) val = parseInt(snapshot.val());
 
 		if (val === 1) set(ref(db, `countData/${entry.location}`), null);
-		else set(ref(db, `countData/${entry.location}`), val);
+		else set(ref(db, `countData/${entry.location}`), val - 1);
 	});
 };
