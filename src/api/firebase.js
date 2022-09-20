@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getDatabase, onValue, ref } from 'firebase/database';
+import { get, getDatabase, onValue, ref, set } from 'firebase/database';
 
 const db = getDatabase(
 	initializeApp({
@@ -17,13 +17,25 @@ const db = getDatabase(
 export const bindCountData = (setState) => {
 	onValue(ref(db, 'countData'), (snapshot) => {
 		let data = snapshot.val();
-		if (data != null) setState(data);
+		if (data !== null) setState(data);
 	});
 };
 
 export const bindEntryData = (setState) => {
 	onValue(ref(db, 'entryData'), (snapshot) => {
 		let data = snapshot.val();
-		if (data != null) setState(data);
+		if (data !== null) setState(data);
+	});
+};
+
+export const addEntry = (entry) => {
+	const key = new Date().getTime();
+	get(ref(db, `countData/${entry.location}`)).then((snapshot) => {
+		let val = 0;
+		if (snapshot.val() !== null) val = parseInt(snapshot.val());
+
+		val += 1;
+		set(ref(db, `countData/${entry.location}`), val);
+		set(ref(db, `entryData/${key}`), { ...entry, key });
 	});
 };

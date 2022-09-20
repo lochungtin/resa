@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { addEntry } from '../api/firebase';
 
 import desc from '../icon/desc.svg';
 import ff from '../icon/fast_forward.svg';
@@ -16,6 +17,8 @@ export default function InputOverlay({ close }) {
 	const [date, setDate] = useState(`${day}-${month.toString().padStart(2, '0')}-${year}`);
 	const [startTime, setStartTime] = useState('03:00 PM');
 	const [endTime, setEndTime] = useState('10:00 PM');
+	const [location, setLocation] = useState('4936');
+	const [remarks, setRemarks] = useState('');
 
 	const [page, setPage] = useState(0);
 
@@ -24,11 +27,11 @@ export default function InputOverlay({ close }) {
 	};
 
 	const next = () => {
-		if (page === 1) close();
-		else setPage(page + 1);
+		if (page === 1) {
+			addEntry({ date, startTime, endTime, location, remarks });
+			close();
+		} else setPage(page + 1);
 	};
-
-	console.log(date, startTime, endTime);
 
 	return (
 		<div className='inputOverlayBg'>
@@ -53,9 +56,27 @@ export default function InputOverlay({ close }) {
 						</>
 					) : (
 						<>
-							<div>
-								<img src={loc} alt='loc' width={30} />
-								<img src={desc} alt='desc' width={30} />
+							<div className='inputRow'>
+								<img className='inputIcon' src={loc} alt='loc' width={30} />
+								<select
+									className='inputSelect'
+									defaultValue={location}
+									onChange={(event) => setLocation(event.target.value)}>
+									<option className='inputOption' value='4936'>
+										4936
+									</option>
+									<option className='inputOption' value='4937'>
+										4937
+									</option>
+								</select>
+							</div>
+							<div className='inputRow'>
+								<img className='inputIcon' src={desc} alt='desc' width={30} />
+								<textarea
+									className='inputRemarks'
+									onChange={(event) => setRemarks(event.target.value)}
+									placeholder='Remarks ... (Optional)'
+								/>
 							</div>
 						</>
 					)}
