@@ -44,8 +44,8 @@ export default function App() {
 	const data = Object.entries(entries)
 		.filter(([key, entry]) => selected === 'all' || selected === entry.location)
 		.sort(([ka, a], [kb, b]) => {
-			let ma = moment(a.date + a.startTime, 'DD-MM-YYYYhh:mmA');
-			let mb = moment(b.date + b.startTime, 'DD-MM-YYYYhh:mmA');
+			const ma = moment(a.date + a.startTime, 'DD-MM-YYYYhh:mmA');
+			const mb = moment(b.date + b.startTime, 'DD-MM-YYYYhh:mmA');
 			return ma.isBefore(mb) * -1;
 		});
 
