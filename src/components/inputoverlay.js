@@ -4,6 +4,7 @@ import { addEntry } from '../api/firebase';
 import desc from '../icon/desc.svg';
 import ff from '../icon/fast_forward.svg';
 import loc from '../icon/location.svg';
+import text from '../icon/text.svg';
 
 import DatePicker from './datepicker';
 import TimePicker from './timepicker';
@@ -18,6 +19,7 @@ export default function InputOverlay({ close }) {
 	const [startTime, setStartTime] = useState('03:00 PM');
 	const [endTime, setEndTime] = useState('10:00 PM');
 	const [location, setLocation] = useState('4936');
+	const [alt, setAlt] = useState('');
 	const [remarks, setRemarks] = useState('');
 
 	const [page, setPage] = useState(0);
@@ -28,7 +30,7 @@ export default function InputOverlay({ close }) {
 
 	const next = () => {
 		if (page === 1) {
-			addEntry({ date, startTime, endTime, location, remarks });
+			addEntry({ date, startTime, endTime, remarks, location: alt ? alt : location });
 			close();
 		} else setPage(page + 1);
 	};
@@ -69,6 +71,14 @@ export default function InputOverlay({ close }) {
 										4937
 									</option>
 								</select>
+							</div>
+							<div className='inputRow'>
+								<img className='inputIcon' src={text} alt='text' width={30} />
+								<textarea
+									className='inputAltTitle'
+									onChange={(event) => setAlt(event.target.value)}
+									placeholder='Alternate Name (Optional for no location)'
+								/>
 							</div>
 							<div className='inputRow'>
 								<img className='inputIcon' src={desc} alt='desc' width={30} />

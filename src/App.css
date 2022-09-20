@@ -218,7 +218,6 @@
 
 .inputSelect {
 	background-color: transparent;
-	/* border: 1px solid white; */
 	border: 0;
 	color: #ddd;
 	font-size: 1.5rem;
@@ -231,12 +230,23 @@
 	color: #ddd;
 }
 
+.inputAltTitle {
+	background-color: transparent;
+	border: 0;
+	color: #ddd;
+	font-size: 1rem;
+	height: 1.5rem;
+	outline: none;
+	resize: none;
+	width: 25rem;
+}
+
 .inputRemarks {
 	background-color: transparent;
 	border: 0;
 	color: #ddd;
 	font-size: 1rem;
-	height: 18rem;
+	height: 15rem;
 	outline: none;
 	resize: none;
 	width: 25rem;
