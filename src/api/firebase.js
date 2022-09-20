@@ -17,25 +17,38 @@ const db = getDatabase(
 export const bindCountData = (setState) => {
 	onValue(ref(db, 'countData'), (snapshot) => {
 		let data = snapshot.val();
-		if (data !== null) setState(data);
+		setState(data !== null ? data : {});
 	});
 };
 
 export const bindEntryData = (setState) => {
 	onValue(ref(db, 'entryData'), (snapshot) => {
 		let data = snapshot.val();
-		if (data !== null) setState(data);
+		setState(data !== null ? data : {});
 	});
 };
 
 export const addEntry = (entry) => {
 	const key = new Date().getTime();
+	set(ref(db, `entryData/${key}`), { ...entry, key });
+
+	get(ref(db, `countData/${entry.location}`)).then((snapshot) => {
+		let val = 0;
+		if (snapshot.val() !== null) val = parseInt(snapshot.val());
+		val += 1;
+
+		set(ref(db, `countData/${entry.location}`), val);
+	});
+};
+
+export const deleteEntry = (entry) => {
+	set(ref(db, `entryData/${entry.key}`), null);
+
 	get(ref(db, `countData/${entry.location}`)).then((snapshot) => {
 		let val = 0;
 		if (snapshot.val() !== null) val = parseInt(snapshot.val());
 
-		val += 1;
-		set(ref(db, `countData/${entry.location}`), val);
-		set(ref(db, `entryData/${key}`), { ...entry, key });
+		if (val === 1) set(ref(db, `countData/${entry.location}`), null);
+		else set(ref(db, `countData/${entry.location}`), val);
 	});
 };
