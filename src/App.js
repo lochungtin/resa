@@ -37,7 +37,7 @@ export default function App() {
 
 	const togglePopUp = (popUpShow) => setInputShow(popUpShow);
 
-	const data = Object.entries(entries).filter((key, entry) => selected === 'all' || selected === entry.location);
+	const data = Object.entries(entries).filter(([key, entry]) => selected === 'all' || selected === entry.location);
 	return (
 		<div className='root'>
 			{inputShow && <InputOverlay close={togglePopUp} />}
