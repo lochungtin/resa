@@ -6,6 +6,7 @@ import ff from '../icon/fast_forward.svg';
 import loc from '../icon/location.svg';
 import text from '../icon/text.svg';
 
+import options from '../options';
 import DatePicker from './datepicker';
 import TimePicker from './timepicker';
 
@@ -64,15 +65,11 @@ export default function InputOverlay({ close, selected }) {
 									className='inputSelect'
 									defaultValue={location}
 									onChange={(event) => setLocation(event.target.value)}>
-									<option className='inputOption' value='4936'>
-										4936
-									</option>
-									<option className='inputOption' value='4937'>
-										4937
-									</option>
-									<option className='inputOption' value='5437'>
-										5437
-									</option>
+									{Object.entries(options).map(([id, name]) => (
+										<option className='inputOption' value={id} key={id}>
+											{name}
+										</option>
+									))}
 								</select>
 							</div>
 							<div className='inputRow'>

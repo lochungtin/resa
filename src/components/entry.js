@@ -6,12 +6,13 @@ import desc from '../icon/desc.svg';
 import time from '../icon/time.svg';
 
 import { deleteEntry } from '../api/firebase';
+import options from '../options';
 
 export default function Entry({ data }) {
 	return (
 		<div className='entryBg'>
 			<div>
-				<p className='entryLocation'>{data.location}</p>
+				<p className='entryLocation'>{options[data.location] || data.location}</p>
 				<div className='entryRow'>
 					<img className='entryIcon' src={date} alt='logo' width={20} />
 					<p className='entrySingleLine'>{data.date}</p>
