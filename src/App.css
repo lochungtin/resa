@@ -251,3 +251,30 @@
 	resize: none;
 	width: 25rem;
 }
+
+.passwordRoot {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	width: 40rem;
+}
+
+.passwordTileRoot {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	height: 10rem;
+	justify-content: flex-end;
+}
+
+.passwordStar {
+	color: #85c997;
+	font-size: 4rem;
+	user-select: none;
+}
+
+.passwordTileBottom {
+	border-bottom: 0.5rem solid #ddd;
+	border-radius: 1rem;
+	width: 4rem;
+}
