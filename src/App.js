@@ -1,3 +1,4 @@
+import moment from 'moment';
 import React, { useState } from 'react';
 
 import './App.css';
@@ -40,7 +41,13 @@ export default function App() {
 
 	const togglePopUp = (popUpShow) => setInputShow(popUpShow);
 
-	const data = Object.entries(entries).filter(([key, entry]) => selected === 'all' || selected === entry.location);
+	const data = Object.entries(entries)
+		.filter(([key, entry]) => selected === 'all' || selected === entry.location)
+		.sort(([ka, a], [kb, b]) => {
+			let ma = moment(a.date + a.startTime, 'DD-MM-YYYYhh:mmA');
+			let mb = moment(b.date + b.startTime, 'DD-MM-YYYYhh:mmA');
+			return ma.isBefore(mb) * -1;
+		});
 
 	if (loggedIn)
 		return (

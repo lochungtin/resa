@@ -44,7 +44,7 @@ export const addEntry = (entry) => {
 };
 
 export const deleteEntry = (entry) => {
-	set(ref(db, `entryData/${entry.keycode}`), null);
+	set(ref(db, `entryData/${entry.key}`), null);
 
 	get(ref(db, `countData/${entry.location}`)).then((snapshot) => {
 		let val = 0;
@@ -59,7 +59,7 @@ export const loginWPswd = (pswd, onComplete) => {
 	signInWithEmailAndPassword(auth, 'default@defau.lt', pswd)
 		.then(
 			(success) => onComplete(),
-			(rej) => {},
+			(rej) => console.log(rej),
 		)
-		.catch((err) => {});
+		.catch((err) => console.log(err));
 };
