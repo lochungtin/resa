@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/resa/static/css/main.299ce610.css",
-    "main.js": "/resa/static/js/main.70348073.js",
+    "main.js": "/resa/static/js/main.92ecb871.js",
     "static/js/787.9fa7d7c3.chunk.js": "/resa/static/js/787.9fa7d7c3.chunk.js",
     "static/media/date.svg": "/resa/static/media/date.7fe013d97f2332157db6c6af6a3a8370.svg",
     "static/media/hide.svg": "/resa/static/media/hide.d3c0b809f384fe7a495cbe1e48d7fb29.svg",
@@ -19,11 +19,11 @@
     "static/media/chevron-right.svg": "/resa/static/media/chevron-right.e0c815b550e3e58d097a7e1b7eb44dd3.svg",
     "static/media/chevron-up.svg": "/resa/static/media/chevron-up.3f2cc279f328c0db52d4ed6c3257450e.svg",
     "main.299ce610.css.map": "/resa/static/css/main.299ce610.css.map",
-    "main.70348073.js.map": "/resa/static/js/main.70348073.js.map",
+    "main.92ecb871.js.map": "/resa/static/js/main.92ecb871.js.map",
     "787.9fa7d7c3.chunk.js.map": "/resa/static/js/787.9fa7d7c3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.299ce610.css",
-    "static/js/main.70348073.js"
+    "static/js/main.92ecb871.js"
   ]
 }
