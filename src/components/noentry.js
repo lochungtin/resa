@@ -8,7 +8,7 @@ export default function NoEntry({ selected }) {
 	return (
 		<div className='entryBg'>
 			<div>
-				<p className='entryLocation'>{options[selected]}</p>
+				<p className='entryLocation'>{options[selected] || 'All'}</p>
 				<div className='entryRow'>
 					<img className='entryIcon' src={desc} alt='logo' width={20} />
 					<p className='entrySingleLine'>No entries yet</p>
