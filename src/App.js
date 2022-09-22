@@ -8,6 +8,7 @@ import Entry from './components/entry';
 import InputBtn from './components/inputbtn';
 import InputOverlay from './components/inputoverlay';
 import Login from './components/login';
+import NoEntry from './components/noentry';
 import ShowHideButton from './components/showhidebtn';
 import Background from './svg/background';
 import Interactable from './svg/interactable';
@@ -58,9 +59,11 @@ export default function App() {
 					<Background />
 				</div>
 				<div className={'entryContainer ' + (selected !== '' ? 'nWidth' : 'zWidth')}>
-					{data.map(([key, entry], index) => (
-						<Entry key={index} data={entry} />
-					))}
+					{data.length > 0 ? (
+						data.map(([key, entry], index) => <Entry key={index} data={entry} />)
+					) : (
+						<NoEntry selected={selected} />
+					)}
 				</div>
 				<div className='btnStack'>
 					<InputBtn click={togglePopUp} showing={inputShow} />

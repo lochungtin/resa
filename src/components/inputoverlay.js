@@ -19,7 +19,7 @@ export default function InputOverlay({ close, selected }) {
 	const [date, setDate] = useState(`${day}-${month.toString().padStart(2, '0')}-${year}`);
 	const [startTime, setStartTime] = useState('03:00 PM');
 	const [endTime, setEndTime] = useState('10:00 PM');
-	const [location, setLocation] = useState(selected || '4936');
+	const [location, setLocation] = useState(selected || '4798');
 	const [alt, setAlt] = useState('');
 	const [remarks, setRemarks] = useState('');
 
@@ -35,6 +35,8 @@ export default function InputOverlay({ close, selected }) {
 			close();
 		} else setPage(page + 1);
 	};
+
+	const locations = Object.entries(options).sort(([ka, a], [kb, b]) => a.localeCompare(b));
 
 	return (
 		<div className='inputOverlayBg'>
@@ -65,7 +67,7 @@ export default function InputOverlay({ close, selected }) {
 									className='inputSelect'
 									defaultValue={location}
 									onChange={(event) => setLocation(event.target.value)}>
-									{Object.entries(options).map(([id, name]) => (
+									{locations.map(([id, name]) => (
 										<option className='inputOption' value={id} key={id}>
 											{name}
 										</option>
